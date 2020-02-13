@@ -1,16 +1,29 @@
 {%extends "layout.html"%}
 {%block content%}
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+  <div class="container" style="text-align:center;">
+    <p class="lead"><strong>Herramienta para la revision de textos academicos.</strong></p>
   </div>
+
+<div class="jumbotron" style="text-align:center">
+  <!--<h1 class="display-4">Hello, world!</h1>-->
+  <!--<hr class="my-4">--><!--line divisora-->
+  <p class="lead">SUBA ARCHIVOS PARA RECONOCER.</p>
+  <!--<a class="btn btn-primary btn-lg" href="#" role="button">Seleccione los archivos.</a>
+  <!--SUBIDA DE ARCHIVOS-->
+  <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+    <input type="file" name="nombreArchivo"/>
+    <img src="https://pngimage.net/wp-content/uploads/2018/05/docx-to-png-9.png" width=35 height=35 />
+ <!--FIN SUBIDA DE ARCHIVOS-->
+    <hr class="my-4">
+      <b class="lead">Elija los idiomas utilizados en su documento.</b>
+      <select class="dropdowns" style="width:15%" class="lead">
+        <option value="1" >Español(ES)
+        <option value="2" >Ingles(EN)
+      </select>
+      <p></p>
+    <input type="submit" class="btn btn-primary" style="width:30%"/>
+  </form>
 </div>
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
+
 {%endblock%}
