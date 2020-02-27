@@ -1,5 +1,46 @@
 {%extends "layout.html"%}
 {%block content%}
-<h1>TOOL AB</h1>
-<H6>2020</H6>
+<!--API CHARTS GOOGLE-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--TAMAÑO GRAFICO-->
+<style type="text/css">
+	#chart_div
+	{
+		background-color: blue;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  
+  function drawChart() 
+  {
+  	var jsonData=$.ajax(
+  	{
+    	url:"/getDatosGrafica",
+    	dataType: "json",
+    	async: false
+    }).responseText;
+
+    var options = {
+      title: 'DOCUMENTOS SUBIDOS',
+      is3D: true,
+    };
+    var data=new google.visualization.DataTable(jsonData);
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+  
+    <!--<div id="piechart_3d" style="width: 900px; height: 500px;"></div>-->
+    <div class="col-sm-12">
+		<div class="chart_div"></div>
+	</div>
+
+
+<!--GRAFICO CHART-->
+<h1>hola bobos</h1>
+
 {%endblock%}

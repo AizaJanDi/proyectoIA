@@ -6,25 +6,37 @@
 	<!--BOOTSTRAP-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
 </head>
-<body>
+<body style="font-family: Roboto">
 	<!--NAV BAR-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  		<img src="https://pngimage.net/wp-content/uploads/2018/06/inteligencia-artificial-png-3.png" width=80 height=80 ALIGN=LEFT BORDER=5 /><h1 class="display-4">TOOL AB</h1>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
+	<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav ml-auto">
-		    	<li class="nav-item active">
-		        	<a class="nav-link" href="/">Iniciar sesion</a>
+		    	<li class="nav-item active" align="center">
+		        	<a class="nav-link" href="/">NOSOTROS</a>
 		      	</li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="{{url_for('home')}}">Acerca de</a>
+	        		<a class="nav-link" href="{{url_for('home')}}">CONTACTOS</a>
 	      		</li>
 	    	</ul>
   		</div>
-	</nav>
+	</nav>-->
+		<!--<ul class="nav bg-light justify-content-center">-->
+		<ul class="nav nav-tabs justify-content-center">
+			<div class="contenedor">			
+				<img class="image" src="https://steemitimages.com/DQmNoc7MQcVdNUjUh3SPiQk9oj5MpM8P57yKwi6GDteUY1b/U5dsLamPfDxwhe5B2pcGHirVT9YTCoR%20(1).gif" style="max-width:100%;width:1650px;height:280px;"/>
+			  	<div class="centrado">
+			    	<img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/5e5309834e58a8680c176f8e/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1582865561&Signature=PSxcrDQyHO%2BICMaLlLmsHEZ3UsY%3D"/>
+			  	</div>  
+			  	 <div class="texto-encima">
+			  	 	<li class="nav-item">
+					    <a class="nav-link" style="color:#FFFFFF"href="{{url_for('about')}}">ACERCA DE</a>
+					</li>
+				</div>
+			</div>
+		</ul>
 	
 <!-- FIN NAV BAR -->
 	<div class="container">

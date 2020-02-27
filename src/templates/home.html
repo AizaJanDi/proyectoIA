@@ -1,29 +1,18 @@
 {%extends "layout.html"%}
 {%block content%}
 
-  <div class="container" style="text-align:center;">
-    <p class="lead"><strong>Herramienta para la revision de textos academicos.</strong></p>
-  </div>
-
-<div class="jumbotron" style="text-align:center">
+<div class="jumbotron" style="text-align:center; background:transparent !important;">
   <!--<h1 class="display-4">Hello, world!</h1>-->
   <!--<hr class="my-4">--><!--line divisora-->
   <p class="lead">SUBA ARCHIVOS PARA RECONOCER.</p>
   <!--<a class="btn btn-primary btn-lg" href="#" role="button">Seleccione los archivos.</a>
   <!--SUBIDA DE ARCHIVOS-->
   <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
-    <h1>TEST 1 </h1>
-    <input type="file" name="nombreArchivo"/>
+    <input type="file" name="nombreArchivo" />
     <img src="https://pngimage.net/wp-content/uploads/2018/05/docx-to-png-9.png" width=35 height=35 />
  <!--FIN SUBIDA DE ARCHIVOS-->
     <hr class="my-4">
-      <b class="lead">Elija los idiomas utilizados en su documento.</b>
-      <select class="dropdowns" style="width:15%" class="lead">
-        <option value="1" >Español(ES)
-        <option value="2" >Ingles(EN)
-      </select>
-      <p></p>
-    <input type="submit" class="btn btn-primary" style="width:30%"/>
+    <input type="submit" class="btn btn-outline-dark" style="width:30%;" value="REVISAR"/>
   </form>
 </div>
 
